@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dcg3lehmk8n2s"]
+
+[ext_resource type="PackedScene" uid="uid://bhl18cn8ahygo" path="res://Assets/models/WorkshopTable.glb" id="1_o23gg"]
+[ext_resource type="Shader" uid="uid://db0ud8dtcpfpe" path="res://Assets/Shaders/PBP_main.gdshader" id="2_wqmi2"]
+[ext_resource type="Texture2D" uid="uid://ceqylorgdvmnh" path="res://Assets/Textures/WorkshopTable_BaseColor.tga" id="3_8b45c"]
+[ext_resource type="Texture2D" uid="uid://d2br8wa8m588o" path="res://Assets/Textures/WorkshopTable_AO.tga" id="4_jk0vx"]
+[ext_resource type="Texture2D" uid="uid://dnot8xdml1pdr" path="res://Assets/Textures/WorkshopTable_Normal.tga" id="5_ulel2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qf70"]
+render_priority = 0
+shader = ExtResource("2_wqmi2")
+shader_parameter/albedo_tex = ExtResource("3_8b45c")
+shader_parameter/normal_tex = ExtResource("5_ulel2")
+shader_parameter/ao_tex = ExtResource("4_jk0vx")
+shader_parameter/normal_strength = 1.0
+shader_parameter/ao_light_affect = 1.0
+shader_parameter/roughness_value = 1.0
+shader_parameter/metallic_value = 0.0
+
+[sub_resource type="Sky" id="Sky_o23gg"]
+
+[sub_resource type="Environment" id="Environment_m35tw"]
+background_mode = 2
+sky = SubResource("Sky_o23gg")
+
+[node name="LookdevLab" type="Node3D" unique_id=1776021489]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2100405358]
+transform = Transform3D(-2.76895e-08, -0.7737739, 0.633462, -3.382273e-08, 0.633462, 0.7737739, -1, -4.0427697e-16, -4.3711395e-08, 2.621911, 4.639909, 0)
+
+[node name="WorkshopTable" parent="." unique_id=874575825 instance=ExtResource("1_o23gg")]
+
+[node name="WorkshopTableLow1" parent="WorkshopTable" index="0" unique_id=1089970757]
+transform = Transform3D(0.9999262, -0.0053621065, -0.010898907, -0.010862699, 0.006735846, -0.9999183, 0.005435082, 0.9999629, 0.006677102, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_3qf70")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595662492]
+environment = SubResource("Environment_m35tw")
+
+[editable path="WorkshopTable"]

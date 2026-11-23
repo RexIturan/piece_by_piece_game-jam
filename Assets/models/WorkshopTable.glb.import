@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhl18cn8ahygo"
-path="res://.godot/imported/WorkshopTable.glb-8bf99462ac1aa93257c6f4bc94df92b8.scn"
+path="res://.godot/imported/WorkshopTable.glb-761a09135303da7f2ca0e7cc4786b7f4.scn"
 
 [deps]
 
-source_file="res://Assets/WorkshopTable.glb"
-dest_files=["res://.godot/imported/WorkshopTable.glb-8bf99462ac1aa93257c6f4bc94df92b8.scn"]
+source_file="res://Assets/models/WorkshopTable.glb"
+dest_files=["res://.godot/imported/WorkshopTable.glb-761a09135303da7f2ca0e7cc4786b7f4.scn"]
 
 [params]
 

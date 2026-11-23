@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cinkooyysch2m"]
-
-[ext_resource type="PackedScene" uid="uid://bhl18cn8ahygo" path="res://Assets/WorkshopTable.glb" id="1_m2122"]
-[ext_resource type="Material" uid="uid://ck433p5ex4fcn" path="res://Assets/Materials/Wood.tres" id="2_2scsm"]
-
-[node name="WorkshopTable" unique_id=907894528 instance=ExtResource("1_m2122")]
-
-[node name="WorkshopTableLow1" parent="." index="0" unique_id=63151347]
-material_override = ExtResource("2_2scsm")
