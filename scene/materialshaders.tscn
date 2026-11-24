@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://bhl18cn8ahygo" path="res://Assets/models/WorkshopTable.glb" id="1_o23gg"]
 [ext_resource type="Shader" uid="uid://db0ud8dtcpfpe" path="res://Assets/Shaders/PBP_main.gdshader" id="2_wqmi2"]
-[ext_resource type="Texture2D" uid="uid://ceqylorgdvmnh" path="res://Assets/Textures/WorkshopTable_BaseColor.tga" id="3_8b45c"]
-[ext_resource type="Texture2D" uid="uid://d2br8wa8m588o" path="res://Assets/Textures/WorkshopTable_AO.tga" id="4_jk0vx"]
-[ext_resource type="Texture2D" uid="uid://dnot8xdml1pdr" path="res://Assets/Textures/WorkshopTable_Normal.tga" id="5_ulel2"]
+[ext_resource type="Texture2D" uid="uid://bwxf2lgtr7p0b" path="res://Assets/Textures/BaseColor.tga" id="3_o23gg"]
+[ext_resource type="Texture2D" uid="uid://mu07amd0eoxa" path="res://Assets/Textures/AO.tga" id="4_wqmi2"]
+[ext_resource type="Texture2D" uid="uid://cm13osrie0xv0" path="res://Assets/Textures/Normal.tga" id="5_8b45c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3qf70"]
 render_priority = 0
 shader = ExtResource("2_wqmi2")
-shader_parameter/albedo_tex = ExtResource("3_8b45c")
-shader_parameter/normal_tex = ExtResource("5_ulel2")
-shader_parameter/ao_tex = ExtResource("4_jk0vx")
+shader_parameter/albedo_tex = ExtResource("3_o23gg")
+shader_parameter/normal_tex = ExtResource("5_8b45c")
+shader_parameter/ao_tex = ExtResource("4_wqmi2")
 shader_parameter/normal_strength = 1.0
 shader_parameter/ao_light_affect = 1.0
 shader_parameter/roughness_value = 1.0
@@ -24,6 +24,7 @@ background_mode = 2
 sky = SubResource("Sky_o23gg")
 
 [node name="LookdevLab" type="Node3D" unique_id=1776021489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.947565, 5.0791264, -4.094053)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2100405358]
 transform = Transform3D(-2.76895e-08, -0.7737739, 0.633462, -3.382273e-08, 0.633462, 0.7737739, -1, -4.0427697e-16, -4.3711395e-08, 2.621911, 4.639909, 0)

@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ck433p5ex4fcn"]
 
-[ext_resource type="Texture2D" uid="uid://doewvpwinb0v" path="res://Assets/Textures/WorkshopTable_BaseColor.tga" id="1_nr08b"]
-[ext_resource type="Texture2D" uid="uid://cc8vk31lhf0aj" path="res://Assets/Textures/WorkshopTable_AO.tga" id="2_lets5"]
-[ext_resource type="Texture2D" uid="uid://bmekantm56f5e" path="res://Assets/Textures/WorkshopTable_Normal.tga" id="3_ki1xm"]
+[ext_resource type="Texture2D" uid="uid://ceqylorgdvmnh" path="res://Assets/Textures/WorkshopTable_BaseColor.tga" id="1_nr08b"]
+[ext_resource type="Texture2D" uid="uid://d2br8wa8m588o" path="res://Assets/Textures/WorkshopTable_AO.tga" id="2_lets5"]
+[ext_resource type="Texture2D" uid="uid://dnot8xdml1pdr" path="res://Assets/Textures/WorkshopTable_Normal.tga" id="3_ki1xm"]
 
 [resource]
 albedo_texture = ExtResource("1_nr08b")

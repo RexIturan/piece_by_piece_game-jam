@@ -4,7 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://3u1o8p8xhnom" path="res://components/ventilation.tscn" id="2_jtske"]
 [ext_resource type="Script" uid="uid://b3p1en62y7y5u" path="res://components/character_body_3d.gd" id="3_f0ajh"]
 [ext_resource type="PackedScene" uid="uid://bhl18cn8ahygo" path="res://Assets/models/WorkshopTable.glb" id="4_8m2bk"]
-[ext_resource type="Material" uid="uid://ck433p5ex4fcn" path="res://Assets/Materials/Wood.tres" id="5_uvla2"]
+[ext_resource type="Shader" uid="uid://db0ud8dtcpfpe" path="res://Assets/Shaders/PBP_main.gdshader" id="5_uvla2"]
+[ext_resource type="Texture2D" uid="uid://bkqdlqo7no5mw" path="res://Assets/Textures/WorkshopTable_BaseColor.tga" id="6_w7amn"]
+[ext_resource type="Texture2D" uid="uid://dmic60f4g8nik" path="res://Assets/Textures/WorkshopTable_AO.tga" id="7_uj0g7"]
+[ext_resource type="Texture2D" uid="uid://c4ny4tshchgro" path="res://Assets/Textures/WorkshopTable_Normal.tga" id="8_p3qwl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5edk5"]
 albedo_color = Color(0.6884459, 0.41102174, 0.0867055, 1)
@@ -34,6 +37,17 @@ density = 2.5287
 albedo = Color(0.016551724, 0.016551726, 0.016551724, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5edk5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pbi4p"]
+render_priority = 0
+shader = ExtResource("5_uvla2")
+shader_parameter/albedo_tex = ExtResource("6_w7amn")
+shader_parameter/normal_tex = ExtResource("8_p3qwl")
+shader_parameter/ao_tex = ExtResource("7_uj0g7")
+shader_parameter/normal_strength = 1.0
+shader_parameter/ao_light_affect = 0.0
+shader_parameter/roughness_value = 0.7
+shader_parameter/metallic_value = 0.0
 
 [node name="world" type="Node3D" unique_id=966583046]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014616847, -0.10384536, 0.13650775)
@@ -169,11 +183,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, 0.875)
 shape = SubResource("BoxShape3D_5edk5")
 
 [node name="Ventilation" parent="room/Node3D" unique_id=127871472 instance=ExtResource("2_jtske")]
-transform = Transform3D(-5.3404097e-08, 2.9340839e-08, -1.38983, 0.67152375, 1.2221998, 0, 1.2221998, -0.67152375, -6.07514e-08, 5.8086457, -1.666, -1.959217)
+transform = Transform3D(5.9934855e-08, -1.1165591e-08, -1.38983, -0.25554413, -1.3715985, 0, -1.3715985, 0.25554413, -6.07514e-08, 5.8086457, -1.666, -1.959217)
 speed = 0.4
 
 [node name="Ventilation2" parent="room/Node3D" unique_id=735442730 instance=ExtResource("2_jtske")]
-transform = Transform3D(6.093084e-08, 3.0536385e-09, -1.38983, 0.07015168, -1.3989831, 0, -1.3989831, -0.07015168, -6.07514e-08, 5.8086457, -1.690924, 1.9967827)
+transform = Transform3D(-5.9560318e-08, 1.330053e-08, -1.38983, 0.30547956, 1.368153, 0, 1.368153, -0.30547956, -6.07514e-08, 5.8086457, -1.690924, 1.9967827)
 speed = -0.2
 
 [node name="lights" type="Node3D" parent="room/Node3D" unique_id=1592951706]
@@ -258,6 +272,6 @@ current = true
 transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 0.9504101, 1.6962011, -3.3333468)
 
 [node name="WorkshopTableLow1" parent="WorkshopTable" index="0" unique_id=1089970757]
-material_override = ExtResource("5_uvla2")
+material_override = SubResource("ShaderMaterial_pbi4p")
 
 [editable path="WorkshopTable"]
